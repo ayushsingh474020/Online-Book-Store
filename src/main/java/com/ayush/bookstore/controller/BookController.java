@@ -31,6 +31,7 @@ public class BookController {
 
     @GetMapping("/{id}") // Get book by ID
     public ResponseEntity<Book> getBookById(@PathVariable Long id) {
+        System.out.println("Updated getBookById in feature-add-book branch");
         return ResponseEntity.ok(bookService.getBookById(id));
     }
 
